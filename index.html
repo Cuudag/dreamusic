@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamusic | Kursus Musik</title>
+	<link rel="icon" type="image/x-icon" href="gambar/dreamusic.png">
+	<link rel="shortcut icon" href="dreamusic.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0b0b0b;
+            color: #e0e0e0;
+        }
+
+        /* Tipografi Pacifico untuk Logo & Judul */
+        .brand-font, h1, h2 {
+            font-family: 'Pacifico', cursive;
+        }
+
+        .gold-text { color: #d4af37; }
+        
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.9);
+            border-bottom: 1px solid #332d2d;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+            filter: brightness(0) invert(1); /* Membuat logo putih jika hitam */
+        }
+
+        .hero-section {
+            padding: 120px 0;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070') no-repeat center center;
+            background-size: cover;
+        }
+
+        .btn-gold {
+            background-color: #d4af37;
+            color: #000;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .btn-gold:hover {
+            background-color: #b8962e;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .card-elegant {
+            background-color: #1a1a1a;
+            border: 1px solid #332d2d;
+            border-radius: 20px;
+        }
+
+        input, select, textarea {
+            background-color: #252525 !important;
+            border: 1px solid #444 !important;
+            color: #fff !important;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand brand-font fs-3" href="index.html">
+                <img src="gambar/dreamusic.png" alt="Logo">
+                <span class="gold-text">Dreamusic</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link mx-2" href="index.html#jadwal">Jadwal</a></li>
+                    <li class="nav-item"><a class="nav-link mx-2" href="index.html#daftar">Pendaftaran</a></li>
+					<li class="nav-item"><a class="nav-link mx-2" href="berita.html">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link mx-2" href="about.html">Tentang Kami</a></li>
+					
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 mb-3"><span class="gold-text">Mimpi</span> adalah Seni</h1>
+            <p class="lead mb-5 text-secondary">Kursus musik eksklusif dan gratis untuk mahasiswa Ilmu Informasi dan Perpustakaan</p>
+            <a href="#daftar" class="btn btn-gold btn-lg px-5">Daftar Sekarang</a>
+        </div>
+    </section>
+
+    <section id="jadwal" class="py-5 container">
+        <h2 class="text-center mb-5">Jadwal <span class="gold-text">Kelas</span></h2>
+        <div class="table-responsive shadow rounded-4 overflow-hidden">
+            <table class="table table-dark table-hover mb-0">
+                <thead class="table-light text-dark">
+                    <tr>
+                        <th>Instrumen</th>
+                        <th>Hari</th>
+                        <th>Waktu</th>
+						<th>Pengajar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Gitar Bass</td><td>Jumat</td><td>15:00 - 15.30</td><td>Rafael Partogi</td></tr>
+                    <tr><td>Gitar Klasik</td><td>Rabu - Sabtu</td><td>11.00 - 22.00</td><td>Rafael Partogi</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="daftar" class="py-5 bg-black">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card card-elegant p-4 shadow">
+                        <h2 class="text-center mb-4">Bergabung <span class="gold-text">Bersama Kami</span></h2>
+                        <form id="google-sheet-form">
+                            <div class="mb-3">
+                                <label class="form-label small">Nama Lengkap</label>
+                                <input type="text" name="nama" class="form-control" required>
+                            </div>
+							    <div class="mb-3">
+                                <label class="form-label small">NIM</label>
+                                <input type="text" name="nim" class="form-control" required>
+                            </div>
+								<div class="mb-3">
+                                <label class="form-label small">Nomor Telepon</label>
+                                <input type="text" name="telepon" class="form-control" required>
+                            </div>
+							    <div class="mb-3">
+                                <label class="form-label small">Angkatan</label>
+                                <select name="angkatan" class="form-select">
+                                    <option>2022</option>
+                                    <option>2023</option>
+                                    <option>2024</option>
+                                    <option>2025</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small">Pilih Instrumen</label>
+                                <select name="instrumen" class="form-select">
+                                    <option>Bass</option>
+                                    <option>Band</option>
+                                </select>
+                            </div>
+							<div class="mb-4">
+                                <label class="form-label">Alasan & Harapan</label>
+                                <textarea name="alasan" class="form-control" rows="3"></textarea>
+                            </div>
+                            <button type="submit" id="submit-btn" class="btn btn-gold w-100 py-2 mt-3">Kirim Formulir</button>
+                        </form>
+						<div id="success-msg" class="text-center mt-3 d-none text-success small">Data berhasil terkirim!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center border-top border-secondary mt-5">
+        <p class="small text-secondary">&copy; 2026 Dreamusic. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+    const scriptURL = 'URL_WEB_APP_ANDA_DISINI';
+    const form = document.getElementById('google-sheet-form');
+    const btn = document.getElementById('submit-btn');
+    const msg = document.getElementById('success-msg');
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        btn.disabled = true;
+        btn.innerHTML = "Sedang Mengirim...";
+
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                btn.disabled = false;
+                btn.innerHTML = "Kirim Formulir";
+                msg.classList.remove('d-none');
+                form.reset();
+                alert("Pendaftaran Berhasil!");
+            })
+            .catch(error => {
+                btn.disabled = false;
+                btn.innerHTML = "Gagal, Coba Lagi";
+                console.error('Error!', error.message);
+            });
+    });
+</script>
+</body>
+</html>
